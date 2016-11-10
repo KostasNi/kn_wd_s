@@ -180,7 +180,7 @@ function _kn_wd_s_get_svg( $args = array() ) {
 
 	// Use absolute path in the Customizer so that icons show up in there.
 	if ( is_customize_preview() ) {
-		$svg .= '<use xlink:href="' . get_parent_theme_file_uri( '/assets/images/svg-icons.svg#icon-' . esc_html( $args['icon'] ) ) . '"></use>';
+		$svg .= '<use xlink:href="' . get_template_directory_uri( '/assets/images/svg-icons.svg#icon-' . esc_html( $args['icon'] ) ) . '"></use>';
 	} else {
 		$svg .= '<use xlink:href="#icon-' . esc_html( $args['icon'] ) . '"></use>';
 	}
@@ -477,4 +477,16 @@ function _kn_wd_s_get_social_network_links() {
 
 	<?php
 	return ob_get_clean();
+}
+
+/**
+ * Displays the optional custom logo.
+ *
+ * Does nothing if the custom logo is not available.
+ *
+ */
+function _kn_wd_s_the_custom_logo() {
+	if ( function_exists( 'the_custom_logo' ) ) {
+		the_custom_logo();
+	}
 }

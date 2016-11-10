@@ -68,6 +68,13 @@ if ( ! function_exists( '_kn_wd_s_setup' ) ) :
 			'default-image' => '',
 		) ) );
 
+		// Set up the WordPress core Logo feature.
+		add_theme_support( 'custom-logo', array(
+			'height'      => 240,
+			'width'       => 240,
+			'flex-height' => true,
+		) );
+
 	}
 endif; // _kn_wd_s_setup
 add_action( 'after_setup_theme', '_kn_wd_s_setup' );
