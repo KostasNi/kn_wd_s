@@ -24,8 +24,6 @@
 	</footer><!-- .site-footer -->
 </div><!-- #page -->
 
-<?php echo wp_kses_post( _kn_wd_s_get_mobile_navigation_menu() ); ?>
-
 <?php wp_footer(); ?>
 
 </body>

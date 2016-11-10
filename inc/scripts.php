@@ -76,9 +76,6 @@ function _kn_wd_s_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	// Enqueue the mobile nav script
-	// Since we're showing/hiding based on CSS and wp_is_mobile is wp_is_imperfect, enqueue this everywhere.
-	wp_enqueue_script( 'kn_wd_s-mobile-nav', get_template_directory_uri() . '/assets/scripts/mobile-nav-menu' . $suffix . '.js', array( 'jquery' ), $version, true );
 }
 add_action( 'wp_enqueue_scripts', '_kn_wd_s_scripts' );
 

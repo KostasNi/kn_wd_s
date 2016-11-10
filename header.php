@@ -32,7 +32,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'kn_wd_s' ); ?></a>
 
-	<header class="site-header">
+	<header id="masthead" class="site-header">
 		<div class="wrap">
 			<?php _kn_wd_s_the_custom_logo(); ?>
 			<div class="site-branding">
@@ -47,16 +47,6 @@
 					<p class="site-description"><?php echo $description; // WPCS: xss ok. ?></p>
 				<?php endif; ?>
 			</div><!-- .site-branding -->
-
-			<nav id="site-navigation" class="main-navigation">
-				<?php
-					wp_nav_menu( array(
-						'theme_location' => 'primary',
-						'menu_id'        => 'primary-menu',
-						'menu_class'     => 'menu dropdown',
-					) );
-				?>
-			</nav><!-- #site-navigation -->
 
 		</div><!-- .wrap -->
 	</header><!-- #masthead -->
