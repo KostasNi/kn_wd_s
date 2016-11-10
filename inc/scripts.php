@@ -67,10 +67,19 @@ function _kn_wd_s_scripts() {
 
 	// Enqueue styles.
 	wp_enqueue_style( 'kn_wd_s-google-font' );
+
+	// Add Genericons, used in the main stylesheet.
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/assets/fonts/genericons/genericons.css', array(), '3.4.1' );
+
 	wp_enqueue_style( 'kn_wd_s-style', get_stylesheet_directory_uri() . '/style' . $suffix . '.css', array(), $version );
 
 	// Enqueue scripts.
 	wp_enqueue_script( 'kn_wd_s-scripts', get_template_directory_uri() . '/assets/scripts/project' . $suffix . '.js', array( 'jquery' ), $version, true );
+
+	wp_localize_script( 'kn_wd_s-scripts', 'screenReaderText', array(
+		'expand'   => __( 'expand child menu', 'kn_wd_s' ),
+		'collapse' => __( 'collapse child menu', 'kn_wd_s' ),
+	) );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
