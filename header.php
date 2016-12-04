@@ -80,6 +80,6 @@
 			<?php endif; ?>
 
 		</div><!-- .wrap -->
-	</header><!-- #masthead -->
+	</header><!-- .site-header -->
 
 	<div id="content" class="site-content">
