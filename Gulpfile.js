@@ -277,8 +277,7 @@ gulp.task( 'wp-pot', [ 'clean:pot' ], () =>
 			'destFile': 'kn_wd_s.pot',
 			'package': 'kn_wd_s',
 			'bugReport': 'http://www.kostasni.com',
-			'lastTranslator': 'Kostas Nicolacopoulos <wds@webdevstudios.com>',
-			'team': 'Team <wds@webdevstudios.com>'
+			'lastTranslator': 'Kostas Nicolacopoulos <knicolacopoulos@gmail.com>'
 		} ) )
 		.pipe( gulp.dest( 'languages/' ) )
 );
@@ -331,7 +330,7 @@ gulp.task( 'watch', function () {
 	browserSync( {
 		'open': false,             // Open project in a new tab?
 		'injectChanges': true,     // Auto inject changes instead of full reload.
-		'proxy': 'http://kn_s.dev',    // Use http://www.kostasni.com:3000 to use BrowserSync.
+		'proxy': 'http://kn_wd_s.dev',    // Use http://www.kn_wd_s.dev:3000 to use BrowserSync.
 		'watchOptions': {
 			'debounceDelay': 1000  // Wait 1 second before injecting.
 		}
